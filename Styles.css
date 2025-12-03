@@ -1,4 +1,3 @@
-/*  BODY  */
 body {
 margin: 20px;
 font-family: Arial, sans-serif;
@@ -7,9 +6,13 @@ color: #2c3e50;
 display: flex;
 flex-direction: column;
 min-height: calc(100vh - 40px);
+background-image: url('https://static.vecteezy.com/system/resources/previews/010/820/720/original/white-background-random-minimalist-abstract-illustration-for-logo-card-banner-web-and-printing-vector.jpg');
+background-color: #ffffff; 
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed; 
 }
 
-/*  NAVBAR  */
 header {
 display: flex;
 justify-content: space-between;
@@ -46,22 +49,11 @@ text-decoration: none;
 font-weight: 600;
 }
 
-/*  MAIN CONTENT  */
-main {
-flex: 1;
-padding: 30px;
-border: 1px solid #d9d6d6;
-border-radius: 10px;
-margin-top: 20px;
-background-color: #f9f9f9;
-}
-
 h1 {
 text-align: center;
 margin-bottom: 30px;
 }
 
-/*  CARS GRID  */
 ul.cars {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -82,24 +74,24 @@ flex-direction: column;
 justify-content: space-between;
 }
 
-ul.cars li .image-box {
-width: 100%;
-height: 200px;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #e0e0e0;
-border-radius: 8px;
-margin-bottom: 15px;
+ul.cars li .image-container {
+    width: 100%;
+    height: 200px; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-ul.cars li .image-box img {
-max-width: 100%;
-max-height: 100%;
-object-fit: contain;
+ul.cars li .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
-/*  TRANSACTIONS BOX  */
 #transactions {
 margin-top: 40px;
 padding: 20px;
@@ -117,7 +109,39 @@ margin-bottom: 20px;
 margin: 10px 0;
 }
 
-/*  FOOTER  */
+#stock-monitor {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9; 
+}
+
+#stock-monitor h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#stock-monitor table {
+    margin: 0 auto; 
+    border-collapse: collapse;
+}
+
+#stock-monitor table th, 
+#stock-monitor table td {
+    text-align: left;
+    border: 1px solid #d9d6d6;
+    padding: 12px 15px;
+}
+
+#stock-monitor table thead tr {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: left;
+}
+
+#stock-monitor table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
 footer {
 background-color: #2c3e50;
 color: #ffffff;
